@@ -1,31 +1,31 @@
 <!DOCTYPE html> <!-- Check bottom of page for commented citations. -->
 <html lang="en">
+
     <head> <!-- The HEAD holds data about the document (metadata). -->
         <meta charset="utf-8">
         <link rel="stylesheet" href="stylesheet.css">
         <title>Homework 1</title>
+        <style>
+            h2 { color:midnightblue; } /* CSS stylesheet override, in meta style attribute, on whole page */
+        </style>
     </head>
+
     <body> <!-- The BODY holds the body of the document itself. -->
 
         <div id="Title_Page_Spoof"> <!-- This is a spoof of House of Leave's title page and opening epigraphs. -->
-        <!-- Requirement 1: "Headings of at least two different levels" -->
-        <!-- Requirement 2: "A link to the Converse website" ... House hyperlinks it is, then! -->
-        <h1><em><a href="https://www.penguinrandomhouse.com/books/36526/house-of-leaves-by-mark-z-danielewski/">House</a> of Leaves</em><sup><a href="#Footnote_BookCitation">1</a></sup></h1>
-        <h2><sub>by</sub><br />Zampanò</h2> <!-- Requirement 3: "At least two different character entities" (1/2) -->
-        <p><em>Muss ne sein?</em></p>
+            <h1><em><a href="https://www.penguinrandomhouse.com/books/36526/house-of-leaves-by-mark-z-danielewski/">House</a> of Leaves</em><sup><a href="#Footnote_BookCitation">1</a></sup></h1>
+            <h2 style="color:darkolivegreen"><sub>by</sub><br />Zampanò</h2> <!-- CSS stylesheet override, in meta style attribute, in-text -->
+            <p><em>Muss ne sein?</em></p>
 
-        <h3><sub>with introduction and notes by</sub><br />Johny Truant</h3>
-        <pre>This is not for you.</pre>
+            <h3 style="color:purple"><sub>with introduction and notes by</sub><br />Johny Truant</h3>
+            <pre>This is not for you.</pre>
         </div>
-
-        <!-- Requirement 4: "All the elements described in class" -->
-            <!-- "You do not need to have a table." -->
 
         <!-- I want to do a tooltip sort of thing, but that hasn't been covered in class. [1] -->
 
         <!-- This is copied from a certain section of House of Leaves, which is cited right there in the "title" attribute. -->
         <!-- As a webpage, this would probably be used for navigation. For now, it's just being displayed openly at all times, so why not have fun with it. -->
-        <div id="Chapter_Titles" title="&emsp;See Appendix I: Zampanò, A. Outlines &amp; Chapter Titles, p.540&emsp;"> <!-- Requirement 3: "At least two different character entities" (3/2) -->
+        <div id="Chapter_Titles" title="&emsp;See Appendix I: Zampanò, A. Outlines &amp; Chapter Titles, p.540&emsp;">
         <blockquote>
             <ol type="I">
             <li>The Film</li>
@@ -48,7 +48,7 @@
             <li>Ftaires! or De la Warr or The History of Ash Tree Lane</li>
             <li>Delial</li>
             <li>The Return</li>
-            <li><span id="Truant"> Nightmares</span><sup><a href="#Footnote_Chapter21">2</a></sup></li>
+            <li><span class="Truant"> Nightmares</span><sup><a href="#Footnote_Chapter21">2</a></sup></li>
             <li>Faith</li>
             <li>Passion<sup><a href="#Footnote_ChapterTitles">3</a></sup></li> <!-- This is called "taking advantage of 
                                                                                 any and all excuses to ramble about HoL."
@@ -58,31 +58,28 @@
             </ol>
         </blockquote></div>
 
-        <div id="Documenters"> <h3>Documenters in <em><a href="https://www.converse.edu/">House</a> of Leaves</em></h3>
-        <!-- Basic paragraph text. -->
-        <p><em><a href="https://www.converse.edu/">House</a> of Leaves</em> is a book all about layers. Or&mdash; it's a book about many things, many people, none of which can ever be as separated as one neat little list would imply.</p>
-        <p>But, in the name of measuring tapes and fishing lines, we can draft a simple outline.
-        <br /><sup><em>In ascending order; the later entries are aware of and comment on, interpret, obsess over their predecessors.</em></sup></p>
+        <div id="Documenters"> <h3 id="Documenters">Documenters in <em><a href="https://www.converse.edu/">House</a> of Leaves</em></h3>
+            <p><em><a href="https://www.converse.edu/">House</a> of Leaves</em> is a book all about layers. Or&mdash; it's a book about many things, many people, none of which can ever be as separated as one neat little list would imply.</p>
+            <p>But, in the name of measuring tapes and fishing lines, we can draft a simple outline.
+            <br /><sup><em>In ascending order; the later entries are aware of and comment on, interpret, obsess over their predecessors.</em></sup></p>
 
-        <!-- Definition and Unordered lists... and also embedding lists in lists, just because! -->
-        <dl>
-            <dt>Will Navidson</dt><dd>Film (or documentary) director of <em>&ldquo;The Navidson Record&rdquo;</em>.
-                <ul>
-                    <li>Karen Greene, <em>&ldquo;What Some Have Thought&rdquo;</em> &amp; <em>&ldquo;A Brief History of Who I Love&rdquo;</em></li>
-                </ul></dd>
-            <dt>Zampanò</dt><dd>Late author of an exegesis, <em>The Navidson Record</em>, titled for the film (or documentary) it analyzes.</dd>
-            <dt>Johnny Truant</dt><dd>Sole editor of Edition 1 of now-titled <em><a href="https://www.converse.edu/">House</a> of Leaves</em>.
-                <ul>
-                    <li>Pelafina H. Lièvre, &ldquo;The Whalestoe Letters&rdquo;</li>
-                </ul></dd>
-            <dt>The Editors</dt><dd>Additional editors of Edition 2 of <em><a href="https://www.converse.edu/">House</a> of Leaves</em>.</dd>
-            <dt>You, the Reader</dt><dd>And I, who led you here.<br />Us, who interpret the same as all the rest of them did.</dd>
-        </dl>
-        <h4>&thinsp;</h4>
+            <dl>
+                <dt>Will Navidson</dt><dd>Film (or documentary) director of <em>&ldquo;The Navidson Record&rdquo;</em>.
+                    <ul>
+                        <li>Karen Greene, <em>&ldquo;What Some Have Thought&rdquo;</em> &amp; <em>&ldquo;A Brief History of Who I Love&rdquo;</em></li>
+                    </ul></dd>
+                <dt>Zampanò</dt><dd>Late author of an exegesis, <em>The Navidson Record</em>, titled for the film (or documentary) it analyzes.</dd>
+                <dt>Johnny Truant</dt><dd>Sole editor of Edition 1 of now-titled <em><a href="https://www.converse.edu/">House</a> of Leaves</em>.
+                    <ul>
+                        <li>Pelafina H. Lièvre, &ldquo;The Whalestoe Letters&rdquo;</li>
+                    </ul></dd>
+                <dt>The Editors</dt><dd>Additional editors of Edition 2 of <em><a href="https://www.converse.edu/">House</a> of Leaves</em>.</dd>
+                <dt>You, the Reader</dt><dd>And I, who led you here.<br />Us, who interpret the same as all the rest of them did.</dd>
+            </dl>
+            <h4>&thinsp;</h4>
         </div>
 
         <!-- House of Leaves -inspired footnotes section. -->
-        <!-- Requirement 3: "At least two different character entities" -->
         <div id="Footnotes"><hr />
             <h5 id="Footnote_Book_Citation"><sup>1</sup>&thinsp;Danielewski, Mark Z. <em><a href="https://www.penguinrandomhouse.com/books/36526/house-of-leaves-by-mark-z-danielewski/">House</a> of Leaves.</em> Pantheon Books, 2000.</h5>
             <h5 id="Footnote_Chapter21"><sup>2</sup>&thinsp;According to The Editors&rsquo; <strong><u>Foreward</u></strong>, 

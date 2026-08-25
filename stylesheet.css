@@ -1,1 +1,12 @@
-h2 { color: purple; }
+/* Tag selector (two tag types given) */
+/* Comma between selectors is OR */
+h2, h3 { color: purple; }
+
+/* More specific than just the tag */
+
+/* Ancestor (parent) Selector */
+dl > ul { color:dimgray; }
+
+/* ID selector, with the tag */
+h3#Documenters { color:crimson; text-decoration: line-through; }
+span#Truant { font-family:'Courier New', Courier, monospace; } 
