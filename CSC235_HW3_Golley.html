@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="stylesheet.css">
+        <title>Homework 3 | Golley's CSC235 Github Page</title>
+    </head>
+    <body>
+        <!-- Two forms, one using GET and one using POST. -->
+        <!-- The action on each form should be https://cs.converse.edu/CSC235/formecho.php. -->
+
+        <h1>Forms</h1>
+
+        <h2>GET Form</h2> <!-- displays data in the url -->
+        <form method="GET" action="https://cs.converse.edu/CSC235/formecho.php" name="getForm">
+            
+            <!-- dropdown (select input)-->
+            <label for="get-dropdown">What is your purpose in coming here? <span style="color: red;">*</span></label>
+            <select name="role" id="get-dropdown" required>
+                <option value="">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</option> <!-- default option -->
+                <option value="page-creator">Testing formatting.</option>
+                <option value="professor">Grading.</option>
+                <option value="visitor">oh, no real reason :)</option>
+            </select><br>
+
+            <!-- single multiple choice (radio input) -->
+            <p> Go to: </p>
+
+                <input type="radio" id="get-this" name="page" value="same" checked>
+                <label for="get-this">This Page (the one I'm on)<br></label>
+
+                <input type="radio" id="get-that" name="page" value="different">
+                <label for="get-that">That Page (somewhere else)<br></label>
+
+                <input type="radio" id="get-no" name="page" value="banishment">
+                <label for="get-no">No Page<br></label>
+
+                <input type="radio" id="get-home" name="page" value="home">
+                <label for="get-home">Home</label>
+
+            <!-- hidden form data (really shouldn't be in a GET form in all likelihood) -->
+            <input type="hidden" id="get-hidden" name="hidden" value="this is a secret (but you can see it in the url)">
+
+            <p style="color: red;"><em>* Required fields.</em></p>
+
+            <input type="submit">   <!-- submits the form data -->
+            <input type="reset">    <!-- displays the form with default values -->
+        </form>
+
+        <br><hr>
+
+        <h2>POST Form</h2> <!-- hides data in the http request -->
+        <form method="POST" action="https://cs.converse.edu/CSC235/formecho.php" name="postForm">
+            
+            <h3>Log-in</h3>
+
+            <!-- text input -->
+            <label for="post-name">Enter name. <span style="color: red;">*</span></label>
+            <input type="text" id="post-name" name="name" required><br>
+
+            <!-- hidden text input (password input) -->
+            <br><label for="post-pswd">Enter password. <span style="color: red;">*</span></label>
+            <input type="password" id="post-pswd" name="password" required><br>
+
+            <p style="color: red;"><em>* Required fields.</em></p>
+
+            <h3>Questionaire</h3>
+
+            <!-- dropdown (select input)-->
+            <label for="post-dropdown">What is your favorite color?</label>
+            <select name="color" id="post-dropdown">
+                <option value="">&mdash;Please select an answer&mdash;</option> <!-- default option -->
+                <optgroup label="Warm Colors">
+                    <option>Red</option>
+                    <option>Orange</option>
+                    <option>Yellow</option>
+                </optgroup>
+                <optgroup label="Cool Colors">
+                    <option>Green</option>
+                    <option>Blue</option>
+                    <option>Indigo</option>
+                    <option>Violet</option>
+                </optgroup>
+            </select><br>
+
+            <!-- color input -->
+            <br><label for="post-color">Enter a color (it doesn't have to be your favorite): </label>
+            <input type="color" id="post-color" name="color"><br>
+
+            <!-- number input -->
+            <br><label for="post-number">I'm thinking of a number between 1 and 10. Can you guess it? </label>
+            <input type="number" id="post-number" name="number" min="1" max="10" step="1"><br>
+
+            <!-- range input -->
+            <label for="post-range">How confident are you in that guess?<br>(not at all) </label>
+            <input type="range" id="post-range" name="range" min="1" max="10" step="1">
+            <label for="post-range"> (i've gotten it correct)</label>
+
+            <!-- single multiple choice (radio input) -->
+            <br><p> I plan to graduate in: </p>
+
+                <input type="radio" id="post-26" name="grad-year" value="2026">
+                <label for="post-26">2026<br></label>
+
+                <input type="radio" id="post-27" name="grad-year" value="2027">
+                <label for="post-27">2027<br></label>
+
+                <input type="radio" id="post-28" name="grad-year" value="2028">
+                <label for="post-28">2028<br></label>
+
+                <input type="radio" id="post-29" name="grad-year" value="2029">
+                <label for="post-29">2029</label>
+
+            <!-- truly-multiple multiple choice (checkbox input) -->
+            <br><p> I have taken the following courses: </p>
+
+                <input type="checkbox" id="post-cs101" name="CS101">
+                <label for="post-cs101">CS101<br></label>
+
+                <input type="checkbox" id="post-cs201" name="CS201">
+                <label for="post-cs201">CS201<br></label>
+
+                <input type="checkbox" id="post-cs301" name="CS301">
+                <label for="post-cs301">CS301<br></label>
+
+            <!-- hidden form data -->
+            <input type="hidden" id="post-hidden" name="hidden" value="this is a secret (but you can see it in the html)">
+
+            <br><label for="post-date">Today's date: </label>
+            <input type="date" id="post-date" name="date">
+
+            <input type="submit">   <!-- submits the form data -->
+            <input type="reset">    <!-- displays the form with default values -->
+        </form>
+
+    </body>
+</html>
