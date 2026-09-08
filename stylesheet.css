@@ -1,12 +1,55 @@
-/* Tag selector (two tag types given) */
-/* Comma between selectors is OR */
-h2, h3 { color: purple; }
+/* Requirements: 
+    Cascading
+    Inheritance 
+    Font manipulation
+    At least two of the text properties covered in class 
+    Color changes */
 
-/* More specific than just the tag */
+/* ---------- ID ---------- */
 
-/* Ancestor (parent) Selector */
-dl > ul { color:dimgray; }
+    /* ID - page structural elements */
+        /* Any page should only have one title and one subtitle. */
 
-/* ID selector, with the tag */
-h3#Documenters { color:crimson; text-decoration: line-through; }
-span#Truant { font-family:'Courier New', Courier, monospace; } 
+        *#title { 
+            font-size: 2.5em;
+            text-align: center; 
+            text-decoration: underline; 
+            text-shadow: 2px 2px 4px #aaa;
+            }
+
+        *#subtitle { 
+            font-size: 1.5em;
+            text-align: center; 
+            text-decoration: underline; 
+            text-shadow: 1px 1px 2px #aaa;
+            }
+
+/* ---------- CLASS ---------- */
+
+    *.house {
+        color: navy;
+    }
+
+    /* CLASS - Documenters & font family stylizations */
+        /* Fulfills requirement: "font manipulation" */
+
+        *.navidson { font-family: 'Book Antiqua', 'American Typewriter', monospace; }
+        *.zampano { font-family: 'Times New Roman', Times, serif; }
+        *.truant { font-family: 'Courier New', Courier, monospace; }
+        *.pelafina { font-family: Kennerley, Dante, Baskerville, 'Baskerville Old Face', serif; }
+        *.ed { font-family: Bookman, 'Bookman Old Style', Helvetica, sans-serif; }
+
+    /* <span> CLASS - Minotaur! "Errors must be hastily excised" - Zampano. */
+    /*HOW TO USE: <span class="excised">
+                        <span class="error"> {text goes here} </span>
+                    </span>                                                 */
+        /* Can also technically do <span style="..."> instead of the inner "error" class. */
+
+        span.excised { /* preserve default color for the strikethrough */
+            text-decoration: line-through;
+            color: default;
+        }
+
+        span.excised > span.error { /* errors without excision appear as if they were intended... aka they look normal */
+            color: crimson;
+        }
