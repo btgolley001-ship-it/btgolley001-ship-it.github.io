@@ -68,7 +68,7 @@
             margin-right: 50%;
             text-align: left;
             font-size: 0.8em;
-            text-decoration: italic;
+            font-style: italic;
             color: darkgrey;
         }
 
@@ -91,7 +91,6 @@
 
         span.excised { /* preserve default color for the strikethrough */
             text-decoration: line-through;
-            color: default;
         }
 
         span.excised > span.error { /* errors without excision appear as if they were intended... aka they look normal */
