@@ -1,0 +1,108 @@
+/* debug */
+* {
+    margin: double blue;
+    border: solid red;
+    padding: dashed green;
+}
+
+/* ---------- ID ---------- */
+
+    /* ID - page structural elements */
+        /* Any page should only have one title and one subtitle. */
+
+        *#title { 
+            font-size: 2.5em;
+            text-align: center; 
+            text-decoration: underline; 
+            text-shadow: 1px 1px 2px #aaa;
+            }
+
+        *#subtitle { 
+            font-size: 1.5em;
+            text-align: center; 
+            text-shadow: 1px 1px 2px #aaa;
+            }
+
+/* ---------- CLASS ---------- */
+
+    /* <blockquote> CLASS - passages */
+        /* Fulfills requirements: "inheritance," "text properties" */
+
+        blockquote.passage {
+            font-size: 0.9em;
+            margin-left: 5%;
+            margin-right: 50%;
+            padding-left: 1em;
+            border-left: 2px solid darkgrey;
+            color: rgb(70, 70, 70);
+        }
+
+        blockquote.passage > p {
+            margin: 0.5em 0;
+            text-indent: 2em;
+        }
+
+        blockquote.passage > p:first-of-type {
+            color: rgb(45, 45, 45);
+            font-size: 1.1em;
+            text-indent: 2em;
+        }
+
+        blockquote.passage > hr {
+            border: none;
+            border-top: 1px solid darkgrey;
+            margin: 0.5em 0;
+        }
+
+        blockquote.passage > hr + p {
+            font-size: 0.8em;
+            text-align: left;
+            color: darkgrey;
+            text-indent: 0em;
+        }
+
+        /* mini page citations after passages */
+        blockquote.passage + p {
+            display: block;
+            margin-left: 5%;
+            margin-right: 50%;
+            text-align: left;
+            font-size: 0.8em;
+            font-style: italic;
+            color: darkgrey;
+        }
+
+    /* CLASS - Documenters & font family stylizations */
+        /* Fulfills requirement: "font manipulation" */
+
+        *.navidson { font-family: 'Book Antiqua', 'American Typewriter', monospace; }
+        *.zampano { font-family: 'Times New Roman', Times, serif; }
+        *.truant { font-family: 'Courier New', Courier, monospace; }
+        *.pelafina { font-family: Kennerley, Dante, Baskerville, 'Baskerville Old Face', serif; }
+        *.ed { font-family: Bookman, 'Bookman Old Style', Helvetica, sans-serif; }
+            p.ed::after { content: " — Ed.";}
+
+    /* <span> CLASS - Minotaur! "Errors must be hastily excised" - Zampano. */
+    /*HOW TO USE: <span class="excised">
+                        <span class="error"> {text goes here} </span>
+                    </span>                                                 */
+        /* Can also technically do <span style="..."> instead of the inner "error" class. */
+        /* Fulfills requirement: "color changes" */
+
+        span.excised { /* preserve default color for the strikethrough */
+            text-decoration: line-through;
+        }
+
+        span.excised > span.error { /* errors without excision appear as if they were intended... aka they look normal */
+            color: crimson;
+        }
+
+    /* --- */
+
+    p.footnote {
+        font-size: 0.8em;
+        text-align: left;
+        color: rgb(45, 45, 45); /* Fulfills requirement: "color changes" */
+    }
+
+    *.house {color: navy;} /* Fulfills requirement: "color changes" */
