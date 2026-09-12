@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="btgolley001-ship-it.github.io\style\stylesheet.css">
+        <title>Home | Golley's CSC235 Github Page</title>
+        <style>
+            ol.hw {
+                counter-reset: list-item;
+            }
+            ol.hw > li {
+                counter-increment: list-item;
+                color: grey;
+                margin-left: 4em;
+            }
+            ol.hw > li::marker { /* Stephanie Eckles, 
+                                 "Modern CSS Solutions for Old CSS Problems: Totally Custom List Styles," 
+                                 https://moderncss.dev/totally-custom-list-styles/#upgrading-to-css-marker */
+                content: "Homework " counter(list-item, decimal) ": ";
+                text-decoration: italic;
+                color: dimgray; 
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1 id="title">Homepage</h1>
+            <h2 id="subtitle">Base Camp, Command Post</h2>
+            <nav>You are Home</nav>
+        </header>
+        
+        <div><h3>Homework</h3>
+        <ol class="hw">
+            <li><a href="CSC235_HW1_Golley.html">initial HTML webpage</a></li>
+            <li><a href="CSC235_HW2_Golley.html">Combined HTML for Miller textbook assignments</a></li>
+            <li><a href="CSC235_HW3_Golley.html">Forms</a></li>
+            <li><a href="CSC235_HW4_Golley.html">updated initial HTML webpage, with CSS style</a></li>
+        </ol>
+        </div>
+
+        <footer>
+            <p>this is the footer</p>
+        </footer>
+    </body>
+</html>

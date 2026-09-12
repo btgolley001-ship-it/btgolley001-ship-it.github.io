@@ -1,9 +1,25 @@
-/* Requirements: 
-    Cascading
-    Inheritance 
-    Font manipulation
-    At least two of the text properties covered in class 
-    Color changes */
+/* ---------- Structure ---------- */
+
+header {
+    text-align: center;
+    background-color: rgb(205, 205, 205);
+    padding: 1em;
+    border-bottom: 2px double rgb(90, 90, 90);
+}
+
+nav {
+    text-align: center;
+    background-color: rgb(230, 230, 230);
+    padding: 1em;
+    border: 2px outset rgb(120, 120, 120);
+}
+
+footer {
+    text-align: center;
+    background-color: rgb(205, 205, 205);
+    padding: 1em;
+    border-top: 2px double rgb(90, 90, 90);
+}
 
 /* ---------- ID ---------- */
 
@@ -48,18 +64,21 @@
             text-indent: 2em;
         }
 
-        blockquote.passage > hr {
-            border: none;
-            border-top: 1px solid darkgrey;
-            margin: 0.5em 0;
-        }
+        /* footnotes within passages */
 
-        blockquote.passage > hr + p {
-            font-size: 0.8em;
-            text-align: left;
-            color: darkgrey;
-            text-indent: 0em;
-        }
+            /**/
+            blockquote.passage > hr {
+                border: none;
+                border-top: 1px solid darkgrey;
+                margin: 0.5em 0;
+            }
+            
+            blockquote.passage > hr + p {
+                font-size: 0.8em;
+                text-align: left;
+                color: darkgrey;
+                text-indent: 0em;
+            }
 
         /* mini page citations after passages */
         blockquote.passage + p {
